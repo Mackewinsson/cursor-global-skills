@@ -16,11 +16,24 @@ Restart Cursor (or open a new Agent chat) so skills are picked up.
 
 ## Update skills
 
+One command — pull from GitHub and refresh symlinks:
+
 ```bash
 cd ~/projects/cursor-global-skills
-git pull
-./install.sh
+./update.sh
 ```
+
+Or from anywhere if you add a shell alias (see below).
+
+## Shell alias (optional)
+
+Add to `~/.zshrc`:
+
+```bash
+alias skills-update='cd ~/projects/cursor-global-skills && ./update.sh'
+```
+
+Then run `skills-update` from any directory after `source ~/.zshrc`.
 
 ## How it works
 
@@ -30,7 +43,12 @@ git pull
 | `.cursor/skills/<name>/` | **Project only** — committed with the repo |
 | `~/.cursor/skills-cursor/` | Cursor built-ins — do not edit |
 
-`install.sh` symlinks each skill folder from this repo into `~/.cursor/skills/`. Edits here + `git pull` update all projects.
+`install.sh` symlinks each skill folder from this repo into `~/.cursor/skills/`. Run `./update.sh` after pulling to refresh links on all machines.
+
+| Script | Purpose |
+|--------|---------|
+| `install.sh` | Link (or `--uninstall`) skills into `~/.cursor/skills/` |
+| `update.sh` | `git pull` + `install.sh` |
 
 ## Included skills
 
