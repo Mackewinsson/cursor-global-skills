@@ -41,6 +41,7 @@ git pull
 | `code-review` | Review diffs, PRs, or code quality |
 | `engineering-principles` | Implement features — minimal scope, DRY, match conventions |
 | `nextjs-web` | Next.js / React / Tailwind landing or app work |
+| `frontend-design` | Distinctive UI, landing pages, components — avoid generic AI aesthetics |
 
 ## Use a skill in chat
 
