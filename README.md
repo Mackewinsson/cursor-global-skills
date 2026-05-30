@@ -34,24 +34,46 @@ git pull
 
 ## Included skills
 
+### Workflow (custom)
+
 | Skill | Use when |
 |-------|----------|
-| `git-commit` | User asks to commit; need message style and safety rules |
+| `git-commit` | User asks to commit; message style and safety rules |
 | `create-pull-request` | Create or open a PR with `gh` |
 | `code-review` | Review diffs, PRs, or code quality |
 | `engineering-principles` | Implement features — minimal scope, DRY, match conventions |
 | `nextjs-web` | Next.js / React / Tailwind landing or app work |
-| `frontend-design` | Distinctive UI, landing pages, components — avoid generic AI aesthetics |
+
+### Design & copy
+
+| Skill | Use when |
+|-------|----------|
+| `frontend-design` | Distinctive UI — avoid generic AI aesthetics |
+| `web-page-copy` | Landing copy: hero, CTAs, benefits, FAQ, meta tags (ES/EN) |
+| `theme-factory` | Apply color/font themes to landings, slides, docs |
+
+### Writing & docs (from [Anthropic](https://github.com/anthropics/skills))
+
+| Skill | Use when |
+|-------|----------|
+| `doc-coauthoring` | Structured workflow for docs, specs, proposals |
+| `internal-comms` | Status updates, FAQs, newsletters (templates in `examples/`) |
+
+### Dev & meta (from Anthropic)
+
+| Skill | Use when |
+|-------|----------|
+| `webapp-testing` | Test web apps with Playwright (local scripts) |
+| `skill-creator` | Create or improve new skills |
 
 ## Use a skill in chat
 
-Skills with `disable-model-invocation: true` (default here) load when you **@ mention** them or ask explicitly:
+Mention with `@` or describe the task:
 
-- `@git-commit commit these changes`
-- `@create-pull-request open a PR`
-- `@code-review review my diff`
-
-Or describe the task; the agent may pick the skill from its description.
+- `@web-page-copy escribe el hero para Transportes EP3`
+- `@frontend-design rediseña la landing`
+- `@theme-factory aplica un tema al sitio`
+- `@doc-coauthoring ayúdame a redactar esta spec`
 
 ## Project-specific skills
 
@@ -82,4 +104,12 @@ cd ~/projects/cursor-global-skills
 2. Run `./install.sh`.
 3. Commit and push.
 
-See [create-skill](https://cursor.com/docs) or Cursor’s built-in create-skill guidance for format.
+See [create-skill](https://cursor.com/docs) or `@skill-creator` for format.
+
+## Attribution
+
+Skills adapted from [anthropics/skills](https://github.com/anthropics/skills) include `LICENSE.txt` where provided (Apache 2.0). See each skill folder.
+
+- `frontend-design`, `theme-factory`, `webapp-testing`, `skill-creator`, `internal-comms` — Anthropic
+- `web-page-copy` — custom (MIT), inspired for landing/marketing copy
+- Workflow skills — custom for this repo
